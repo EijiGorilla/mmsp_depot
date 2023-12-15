@@ -148,7 +148,7 @@ function App() {
           </div>
 
           <img
-            src="https://EijiGorilla.github.io/Symbols/Projec_Logo/GCR LOGO.png"
+            src="https://EijiGorilla.github.io/Symbols/Projec_Logo/MMSP.png"
             alt="GCR Logo"
             height={'4.4%'}
             width={'4.4%'}
