@@ -13,6 +13,16 @@ import {
 } from '@arcgis/core/symbols';
 import SolidEdges3D from '@arcgis/core/symbols/edges/SolidEdges3D';
 
+/* Standalone table for Dates */
+export const dateTable = new FeatureLayer({
+  portalItem: {
+    id: '8a7097f019e14e488e31235519a963fd',
+    portal: {
+      url: 'https://gis.railway-sector.com/portal',
+    },
+  },
+});
+
 /* Station point layer */
 var labelClass = new LabelClass({
   symbol: new LabelSymbol3D({
