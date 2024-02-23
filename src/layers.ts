@@ -16,7 +16,7 @@ import SolidEdges3D from '@arcgis/core/symbols/edges/SolidEdges3D';
 /* Standalone table for Dates */
 export const dateTable = new FeatureLayer({
   portalItem: {
-    id: '8a7097f019e14e488e31235519a963fd',
+    id: 'a084d9cae5234d93b7aa50f7eb782aec',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
@@ -66,7 +66,7 @@ var labelClass = new LabelClass({
 
 export const stationLayer = new FeatureLayer({
   portalItem: {
-    id: 'c34277793d164f248abb0926963ae92d',
+    id: '52d4f29105934e3f95f6b39c7e5fba6e',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
@@ -165,12 +165,12 @@ const lotLabel = new LabelClass({
 
 export const lotLayer = new FeatureLayer({
   portalItem: {
-    id: '7e20edfba96e4854acd716cbadf5f57f',
+    id: '0c172b82ddab44f2bb439542dd75e8ae',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
   },
-  layerId: 1,
+  layerId: 8,
   outFields: ['*'],
   title: 'Land Acquisition',
   labelingInfo: [lotLabel],
@@ -222,7 +222,7 @@ const ConstructionBoundaryFill = new UniqueValueRenderer({
 
 export const constructionBoundaryLayer = new FeatureLayer({
   portalItem: {
-    id: 'c34277793d164f248abb0926963ae92d',
+    id: '0c172b82ddab44f2bb439542dd75e8ae',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
@@ -274,7 +274,10 @@ function renderDepotBuildingStructureLayer() {
 
 export const depotBuildingStructureLayer = new SceneLayer({
   portalItem: {
-    id: '78ecd203aab64e64b19e695ffd5dc33e',
+    id: 'ce9adf201b654116956d721a17be5b17',
+    portal: {
+      url: 'https://gis.railway-sector.com/portal',
+    },
   },
   popupTemplate: {
     title: '<h5>{Status}</h5>',
