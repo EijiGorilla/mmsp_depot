@@ -171,7 +171,7 @@ export const lotLayer = new FeatureLayer({
     },
   },
   layerId: 8,
-  outFields: ['*'],
+  // outFields: ['*'],
   title: 'Land Acquisition',
   labelingInfo: [lotLabel],
   renderer: lotLayerStatusRenderer,
@@ -228,7 +228,7 @@ export const constructionBoundaryLayer = new FeatureLayer({
     },
   },
   layerId: 4,
-  outFields: ['*'],
+  // outFields: ['*'],
   renderer: ConstructionBoundaryFill,
   definitionExpression: 'MappingBoundary = 1',
   title: 'Construction Boundary',
@@ -282,7 +282,7 @@ export const depotBuildingStructureLayer = new SceneLayer({
   popupTemplate: {
     title: '<h5>{Status}</h5>',
     lastEditInfoEnabled: false,
-    outFields: ['*'],
+    // outFields: ['*'],
     returnGeometry: true,
     content: [
       {
