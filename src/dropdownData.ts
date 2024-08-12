@@ -33,6 +33,9 @@ export const dropdownData = [
     name: 'SEC',
   },
   {
+    name: 'SHT',
+  },
+  {
     name: 'SS',
   },
   {
