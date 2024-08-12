@@ -12,6 +12,7 @@ import {
   SimpleLineSymbol,
 } from '@arcgis/core/symbols';
 import SolidEdges3D from '@arcgis/core/symbols/edges/SolidEdges3D';
+import { labelSymbol3DLine } from './Label';
 
 /* Standalone table for Dates */
 export const dateTable = new FeatureLayer({
@@ -318,3 +319,44 @@ export const depotBuildingStructureLayer = new SceneLayer({
 });
 
 renderDepotBuildingStructureLayer();
+
+/* Building Scene Layer for station structures */
+const buildingSpotLabel = labelSymbol3DLine({
+  materialColor: '#d4ff33',
+  fontSize: 15,
+  fontFamily: 'Ubuntu Mono',
+  fontWeight: 'normal',
+  haloColor: 'black',
+  haloSize: 0.5,
+  vOffsetScreenLength: 100,
+  vOffsetMaxWorldLength: 700,
+  vOffsetMinWorldLength: 80,
+  calloutColor: 'gray',
+  calloutSize: 0.3,
+});
+
+var labelClassBulding = new LabelClass({
+  symbol: buildingSpotLabel,
+  labelPlacement: 'above-center',
+  labelExpressionInfo: {
+    expression: 'DefaultValue($feature.Building_Names, "no data")',
+    //value: "{TEXTSTRING}"
+  },
+});
+
+export const buildingSpotLayer = new FeatureLayer({
+  portalItem: {
+    id: '25611ac3ee734c548fcb1e5c4ca7b4db',
+    portal: {
+      url: 'https://gis.railway-sector.com/portal',
+    },
+  },
+  popupEnabled: false,
+  outFields: ['*'],
+  labelingInfo: [labelClassBulding],
+  elevationInfo: {
+    mode: 'relative-to-ground',
+    offset: 3,
+  },
+});
+buildingSpotLayer.listMode = 'hide';

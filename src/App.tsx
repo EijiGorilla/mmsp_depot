@@ -24,7 +24,7 @@ import {
 } from '@esri/calcite-components-react';
 import Chart from './components/Chart';
 import { dropdownData } from './dropdownData';
-import { dateUpdate } from './Query';
+import { dateUpdate, zoomToLayer } from './Query';
 import { depotBuildingStructureLayer } from './layers';
 
 function App() {

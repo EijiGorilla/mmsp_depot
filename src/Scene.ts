@@ -9,6 +9,7 @@ import {
   constructionBoundaryLayer,
   depotBuildingStructureLayer,
   lotLayer,
+  buildingSpotLayer,
 } from './layers';
 
 export const map = new Map({
@@ -20,6 +21,7 @@ map.add(depotBuildingStructureLayer);
 map.add(constructionBoundaryLayer);
 map.add(lotLayer);
 map.add(stationLayer);
+map.add(buildingSpotLayer);
 
 export const view = new SceneView({
   container: undefined,
