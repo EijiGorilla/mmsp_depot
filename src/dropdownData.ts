@@ -27,6 +27,9 @@ export const dropdownData = [
     name: 'OT',
   },
   {
+    name: 'PA',
+  },
+  {
     name: 'PRI',
   },
   {
