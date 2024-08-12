@@ -231,7 +231,8 @@ export const constructionBoundaryLayer = new FeatureLayer({
   layerId: 4,
   // outFields: ['*'],
   renderer: ConstructionBoundaryFill,
-  definitionExpression: 'MappingBoundary = 1',
+  // definitionExpression: 'MappingBoundary = 1',
+  definitionExpression: "Station = 'Depot'",
   title: 'Construction Boundary',
   elevationInfo: {
     mode: 'on-the-ground',

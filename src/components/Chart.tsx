@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { view } from '../Scene';
-import { buildingSpotLayer, depotBuildingStructureLayer } from '../layers';
+import {
+  buildingSpotLayer,
+  constructionBoundaryLayer,
+  depotBuildingStructureLayer,
+} from '../layers';
 import FeatureFilter from '@arcgis/core/layers/support/FeatureFilter';
 import * as am5 from '@amcharts/amcharts5';
 import * as am5xy from '@amcharts/amcharts5/xy';
@@ -42,7 +46,10 @@ const Chart = (props: any) => {
       setProgress(response);
     });
 
-    zoomToLayer(depotBuildingStructureLayer);
+    !props.depotname
+      ? zoomToLayer(constructionBoundaryLayer)
+      : zoomToLayer(depotBuildingStructureLayer);
+
     !props.depotname
       ? (buildingSpotLayer.definitionExpression = '1=1')
       : (buildingSpotLayer.definitionExpression = "Building_Names = '" + props.depotname + "'");

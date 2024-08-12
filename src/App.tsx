@@ -84,7 +84,7 @@ function App() {
   };
 
   useEffect(() => {
-    map.ground.opacity = underground === true ? 0.7 : 1;
+    map.ground.opacity = underground === false ? 0.7 : 1;
     view.environment.atmosphereEnabled = false;
   }, [underground]);
 
@@ -288,11 +288,11 @@ function App() {
           }}
         >
           Ground: {''}
-          On{' '}
+          Off{' '}
           <CalciteSwitch
             onCalciteSwitchChange={(event: any) => setUnderground(event.target.checked)}
           ></CalciteSwitch>{' '}
-          Off
+          On
         </div>
 
         <div className="mapDiv" ref={mapDiv}></div>
