@@ -47,12 +47,9 @@ const Chart = (props: any) => {
     });
 
     !props.depotname
-      ? zoomToLayer(constructionBoundaryLayer)
-      : zoomToLayer(depotBuildingStructureLayer);
-
-    !props.depotname
       ? (buildingSpotLayer.definitionExpression = '1=1')
-      : (buildingSpotLayer.definitionExpression = "Building_Names = '" + props.depotname + "'");
+      : (buildingSpotLayer.definitionExpression = "Building_Names = '" + props.depotname + "'") &&
+        zoomToLayer(depotBuildingStructureLayer);
   }, [props.depotname]);
 
   // Define parameters

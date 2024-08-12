@@ -26,13 +26,12 @@ map.add(buildingSpotLayer);
 export const view = new SceneView({
   container: undefined,
   map,
-  center: [120.5793, 15.18],
-  zoom: 13,
+  zoom: 19,
   viewingMode: 'local',
   camera: {
     position: {
-      x: 121.0322874,
-      y: 14.6750462,
+      x: 121.019,
+      y: 14.6800462,
       z: 1000,
     },
     tilt: 65,
