@@ -53,7 +53,8 @@ export const basemaps = new BasemapGallery({
 
 export const layerList = new LayerList({
   view: view,
-  selectionEnabled: true,
+  selectionMode: 'multiple',
+  visibilityAppearance: 'checkbox',
   container: undefined,
   listItemCreatedFunction: (event) => {
     const item = event.item;
